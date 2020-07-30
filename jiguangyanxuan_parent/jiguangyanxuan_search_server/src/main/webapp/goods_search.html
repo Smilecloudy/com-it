@@ -221,23 +221,30 @@
         <!-- 商品详情 -->
         <div class="pdd_deta">
             <ul class="screen">
+				<li>
+					<h6>类目：</h6>
+					<div>
+						<a href="javascript:;" ng-repeat="value in categoryList">{{value}}</a>
+					</div>
+					<a href="javascript:;" class="more">更多</a>
+				</li>
                 <li>
                     <h6>品牌：</h6>
-                    <div>
-                        <a href="javascript:;">香奈儿（chanel）</a>
-                        <a href="javascript:;">迪奥（Dior）</a>
-                        <a href="javascript:;">范思哲（VERSACE）</a>
-                        <a href="javascript:;">菲拉格慕（Ferragamo）</a>
-                        <a href="javascript:;">兰蔻（LANCOME）</a>
-                        <a href="javascript:;">爱马仕（HERMES）</a>
-                        <a href="javascript:;">古驰（GUCCI）</a>
-                        <a href="javascript:;">宝格丽（BVLGARI）</a>
-                        <a href="javascript:;">阿迪达斯（Adidas）</a>
-                        <a href="javascript:;">卡尔文·克莱恩（CK）</a>
-                        <a href="javascript:;">大卫杜夫（Davidoff）</a>
-                    </div>
-                    <a href="javascript:;" class="more">更多</a>
-                </li>
+				<div>
+					<a href="javascript:;">香奈儿（chanel）</a>
+					<a href="javascript:;">迪奥（Dior）</a>
+					<a href="javascript:;">范思哲（VERSACE）</a>
+					<a href="javascript:;">菲拉格慕（Ferragamo）</a>
+					<a href="javascript:;">兰蔻（LANCOME）</a>
+					<a href="javascript:;">爱马仕（HERMES）</a>
+					<a href="javascript:;">古驰（GUCCI）</a>
+					<a href="javascript:;">宝格丽（BVLGARI）</a>
+					<a href="javascript:;">阿迪达斯（Adidas）</a>
+					<a href="javascript:;">卡尔文·克莱恩（CK）</a>
+					<a href="javascript:;">大卫杜夫（Davidoff）</a>
+				</div>
+				<a href="javascript:;" class="more">更多</a>
+				</li>
                 <li>
                     <h6>价格：</h6>
                     <div>
@@ -294,7 +301,7 @@
                         <span class="collect">收藏</span>
                     </div>
                     <span>￥{{data.price}}</span>
-                    <p title="{{data.sellPoint}}"><a href="">{{data.label}}</a></p>
+                    <p title="{{data.sellPoint}}"><a href="" ng-bind-html="data.label | to_trusted"></a></p>
                     <p>{{data.sellerName}}</p>
                     <a href="javascript:;" class="cart_btn">加入购物车</a>
                 </li>
@@ -491,4 +498,5 @@
 <script type="text/javascript" src="js/custom/app.module.js"></script>
 <script type="text/javascript" src="js/custom/app.service.js"></script>
 <script type="text/javascript" src="js/custom/app.controller.js"></script>
+<script type="text/javascript" src="js/custom/app.filter.js"></script>
 </html>
